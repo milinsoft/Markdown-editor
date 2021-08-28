@@ -67,8 +67,7 @@ def ordered_list():
         print("The number of rows should be greater than zero")
         return ordered_list()
     else:
-        txt = [input(f"Row #{i}: ") for i in range(1, rows_num + 1)]
-        txt = [str(txt.index(i)+1)+". " + i for i in txt]
+        txt = [str(i) + ". " + input(f"Row #{i}: ") for i in range(1, rows_num + 1)]
         text += "\n".join(txt) + "\n"
         print(text)
 
